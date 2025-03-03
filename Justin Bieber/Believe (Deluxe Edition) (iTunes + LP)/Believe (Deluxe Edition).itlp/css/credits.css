@@ -1,0 +1,9 @@
+#credits {
+  background-image: url("../images/credits/background.jpg");
+}
+
+#credits > .title {
+  position: absolute;
+  left: 400px;
+  top: 20px;
+}
