@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Metadata</key>
+	<dict>
+		<key>artistName</key>
+		<string>Justin Bieber</string>
+		<key>comments</key>
+		<string></string>
+		<key>description</key>
+		<string></string>
+		<key>genre</key>
+		<string>[Pop</string>
+		<key>itemName</key>
+		<string>iTunes LP - Believe (Deluxe Edition)</string>
+		<key>playlistArtistName</key>
+		<string>Justin Bieber</string>
+		<key>playlistName</key>
+		<string>Believe (Deluxe Edition)</string>
+		<key>sort-album</key>
+		<string>Believe</string>
+		<key>sort-album-artist</key>
+		<string>Justin Bieber</string>
+		<key>sort-album-artist-status</key>
+		<integer>1</integer>
+		<key>sort-album-status</key>
+		<integer>1</integer>
+		<key>sort-artist</key>
+		<string>Justin Bieber</string>
+		<key>sort-artist-status</key>
+		<integer>1</integer>
+		<key>sort-name</key>
+		<string>iTunes LP - Believe (Deluxe Edition)</string>
+		<key>sort-name-status</key>
+		<integer>128</integer>
+		<key>year</key>
+		<integer>2012</integer>
+	</dict>
+	<key>Name File</key>
+	<string>iTunes LP - Believe (Deluxe Edition).itlp</string>
+</dict>
+</plist>
