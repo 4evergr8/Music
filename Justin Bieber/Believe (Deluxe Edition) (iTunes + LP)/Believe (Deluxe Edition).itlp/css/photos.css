@@ -1,0 +1,98 @@
+#photos {
+  background: none;
+}
+
+#photos > .buttons > .home {
+  background: none;
+  left: 1090px;
+  top:  589px;
+  
+  z-index: 5;
+}
+
+/* Sliding View */
+
+#photos .sliding-view {
+  background-color: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding:0px;
+  z-index: 0;
+}
+
+#photos .sliding-view-element {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1280px;
+  height: 720px;
+  text-align: center;
+  -webkit-transition: opacity 250ms;
+  z-index: 0;
+}
+
+#photos .sliding-view-element > img {
+  margin: auto;
+  -webkit-transition: opacity 250ms;
+  opacity: 0; 
+  vertical-align: middle;
+}
+
+#photos .sliding-view-element-focused > img {
+  opacity: 1;
+  vertical-align: middle;
+}
+
+#photos .sliding-view-element-hidden {
+  display: none;
+}
+
+/* Arrows */
+
+#photos .left-arrow {
+  position: absolute;
+  display:  block;
+  
+  left:   110px;
+  top:    336px;
+  
+  z-index: 5;
+}
+
+#photos .left-arrow > img:nth-of-type(2) {
+	left: -0px;
+	top:  -0px;	
+}
+
+#photos .right-arrow {
+  position: absolute;
+  display:  block;
+  
+  left:   1137px;
+  top:    336px;
+  
+  z-index: 5;
+}
+
+#photos .right-arrow > img:nth-of-type(2) {
+	left: 1137px;
+	top:  336px;
+}
+
+#photos .inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* dim the arrows when they're inactive on Apple TV */
+@media (-webkit-apple-tv) {
+  #photos .inactive {
+    opacity: 1;
+  }
+}
