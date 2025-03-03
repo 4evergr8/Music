@@ -1,0 +1,54 @@
+#linernotes {
+  background-image: url("../images/linernotes/background.jpg");
+}
+
+#linernotes > .title {
+  position: absolute;
+  left: 400px;
+  top: 20px;
+}
+
+/* Buttons */
+
+#linernotes > .buttons > .home {
+  left: 40px;
+  top: 20px;
+}
+
+/* Content */
+
+.linernotes-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 1250px;
+  height: 1000px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
+}
+#linernotes .scrollgroup {
+	position:absolute;
+	left:-10px;
+	top:97px;
+	width:1400px;
+	height:581px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	z-index:1;
+}
+#linernotes .scrollgroup::-webkit-scrollbar {
+	border-style:none;
+	width:50px;
+	height:602px;
+}
+#linernotes .scrollgroup::-webkit-scrollbar-thumb,
+#linernotes .scrollgroup::-webkit-scrollbar-thumb:active {
+	background:url(../images/linernotes/scrollhandle.png) no-repeat center center;
+	cursor:pointer;
+	display:block;
+	border-color:transparent;
+	background-color:transparent;
+	width:50px;
+	height:41px;
+}
