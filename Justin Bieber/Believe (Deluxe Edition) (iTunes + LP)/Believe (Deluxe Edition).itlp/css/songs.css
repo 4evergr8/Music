@@ -1,0 +1,142 @@
+#songs {
+	background-image:url(../images/songs/background.jpg);
+
+}
+#songs .Text #song17 {
+	position:absolute;
+	left:65px;
+	top:450px;
+	width:279px;
+	height:24px;
+
+}
+#songs .Text #song16 {
+	position:absolute;
+	left:65px;
+	top:425px;
+	width:279px;
+	height:24px;
+
+}
+#songs .Text #song15 {
+	position:absolute;
+	left:65px;
+	top:400px;
+	width:279px;
+	height:24px;
+
+}
+#songs .Text #song14 {
+	position:absolute;
+	left:65px;
+	top:375px;
+	width:279px;
+	height:24px;
+
+}
+#songs .Text #song13 {
+	position:absolute;
+	left:65px;
+	top:350px;
+	width:279px;
+	height:24px;
+
+}
+#songs .Text #song12 {
+	position:absolute;
+	left:65px;
+	top:325px;
+	width:279px;
+	height:24px;
+}
+#songs .Text #song11 {
+	position:absolute;
+	left:65px;
+	top:300px;
+	width:182px;
+	height:24px;
+}
+#songs .Text #song10 {
+	position:absolute;
+	left:65px;
+	top:275px;
+	width:180px;
+	height:24px;
+}
+#songs .Text #song09 {
+	position:absolute;
+	left:65px;
+	top:250px;
+	width:237px;
+	height:24px;
+}
+#songs .Text #song08 {
+	position:absolute;
+	left:65px;
+	top:225px;
+	width:305px;
+	height:24px;
+}
+#songs .Text #song07 {
+	position:absolute;
+	left:65px;
+	top:200px;
+	width:237px;
+	height:24px;
+}
+#songs .Text #song06 {
+	position:absolute;
+	left:65px;
+	top:175px;
+	width:360px;
+	height:25px;
+}
+#songs .Text #song05 {
+	position:absolute;
+	left:65px;
+	top:150px;
+	width:166px;
+	height:24px;
+}
+#songs .Text #song04 {
+	position:absolute;
+	left:65px;
+	top:125px;
+	width:346px;
+	height:24px;
+}
+#songs .Text #song03 {
+	position:absolute;
+	left:65px;
+	top:100px;
+	width:154px;
+	height:24px;
+}
+#songs .Text #song02 {
+	position:absolute;
+	left:65px;
+	top:75px;
+	width:277px;
+	height:24px;
+}
+#songs .Text #song01 {
+	position:absolute;
+	left:65px;
+	top:50px;
+	width:236px;
+	height:24px;
+}
+#songs .home {
+	position:absolute;
+	left:65px;
+	top:520px;
+	width:61px;
+	height:20px;
+}
+
+#songs > .title {
+  position: absolute;
+  left: 500px;
+  top: 450px;
+}
+
