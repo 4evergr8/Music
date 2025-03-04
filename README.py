@@ -51,7 +51,7 @@ if __name__ == "__main__":
     markdown_content = generate_markdown(script_path, exclude_list=exclude_list)
 
     # 输出到文件
-    output_file = os.path.join(script_path, "file_structure.md")
+    output_file = os.path.join(script_path, "README.md")
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(markdown_content)
 
