@@ -46,7 +46,7 @@ if __name__ == "__main__":
     print("正在生成文件路径列表...")
 
     # 定义白名单列表
-    whitelist = ["txt"]  # 路径中必须包含这些字符串之一
+    whitelist = ["m4a"]  # 路径中必须包含这些字符串之一
 
     # 生成文件路径列表
     file_paths = generate_file_paths(script_path, whitelist=whitelist)
