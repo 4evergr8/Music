@@ -1,19 +1,10 @@
 import os
 
-def generate_markdown(path, level=0, exclude_list=None):
-    """
-    递归遍历文件夹并生成Markdown内容：
-    - 文件夹使用 <details> 和 <summary> 实现折叠。
-    - 每深入一层，增加空格数量来缩进，而不是增加 '-' 的数量。
-    - 文件夹和文件的层级通过空格缩进对齐。
-    - 排除功能：如果路径包含排除词，则跳过该路径。
-    """
+def generate_markdown(path, level=0, exclude_list=None, parent_index=""):
     if exclude_list is None:
         exclude_list = []
 
     markdown = ""
-    indent = "  " * level  # 每深入一层，增加两个空格的缩进
-    bullet = "- "  # 文件和文件夹的前缀始终为 "- "，层级通过空格缩进体现
 
     try:
         items = sorted(os.listdir(path))  # 获取当前文件夹中的所有内容
@@ -21,7 +12,15 @@ def generate_markdown(path, level=0, exclude_list=None):
         print(f"无法访问文件夹：{path}")
         return ""
 
-    for item in items:
+    # 分离文件夹和文件
+    folders = [item for item in items if os.path.isdir(os.path.join(path, item))]
+    files = [item for item in items if not os.path.isdir(os.path.join(path, item))]
+
+    # 合并排序结果，文件夹在前，文件在后
+    sorted_items = folders + files
+
+    index = 1  # 初始化编号
+    for item in sorted_items:
         item_path = os.path.join(path, item)
 
         # 检查路径是否包含排除词
@@ -29,12 +28,16 @@ def generate_markdown(path, level=0, exclude_list=None):
             continue  # 如果包含排除词，则跳过
 
         if os.path.isdir(item_path):  # 如果是文件夹
-            markdown += f"{indent}{bullet}<details>\n"
-            markdown += f"{indent}  <summary>{item}/</summary>\n\n"
-            markdown += generate_markdown(item_path, level + 1, exclude_list)  # 递归处理子文件夹
-            markdown += f"{indent}</details>\n\n"
+            markdown += f"<details>\n"
+            markdown += f'  <summary>{item}/</summary>\n\n'
+            markdown += f"<ul>\n"  # 开始无序列表
+            markdown += generate_markdown(item_path, level + 1, exclude_list, parent_index)  # 递归处理子文件夹
+            markdown += f"</ul>\n"  # 结束无序列表
+            markdown += f"</details>\n\n"
         else:  # 如果是文件
-            markdown += f"{indent}{bullet}{item}\n"
+            markdown += f"<li><code>{item}</code></li>\n"  # 使用 <li> 包裹文件，并用 <code> 包裹文件名
+
+        index += 1  # 更新编号
 
     return markdown
 
@@ -45,7 +48,7 @@ if __name__ == "__main__":
     print("正在生成Markdown内容...")
 
     # 定义排除词列表
-    exclude_list = [".git", "exclude_word2", "exclude_folder"]
+    exclude_list = [".git", "py", "txt", "bat", "md"]
 
     # 生成Markdown内容
     markdown_content = generate_markdown(script_path, exclude_list=exclude_list)
