@@ -52,7 +52,7 @@ if __name__ == "__main__":
     file_paths = generate_file_paths(script_path, whitelist=whitelist)
 
     # 输出到文件
-    output_file = os.path.join(script_path, "file_structure.txt")
+    output_file = os.path.join(script_path, "FILELIST.txt")
     with open(output_file, "w", encoding="utf-8") as f:
         for path in file_paths:
             f.write(path + "\n")
