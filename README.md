@@ -1,0 +1,10 @@
+- <details>
+  - <summary>folder1</summary>
+  - - file1.txt
+  - - <details>
+  - -   <summary>folder2</summary>
+  - - - file2.txt
+  - - - file3.txt
+  - - </details>
+  - - file4.txt
+  - </details>
