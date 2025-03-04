@@ -25,7 +25,7 @@ def generate_markdown(path, level=0):
             markdown += generate_markdown(item_path, level + 1)  # 递归处理子文件夹
             markdown += f"{indent} </details>\n\n"
         else:  # 如果是文件
-            markdown += f"{indent} {item}\n\n"
+            markdown += f"{indent} {item}  \n\n"
 
     return markdown
 
